@@ -1,0 +1,31 @@
+{
+  "type": "record",
+  "name": "chart",
+  "fields": [
+    { "name": "schemaVersion", "type": "string" },
+    { 
+      "name": "bars",
+      "type": {
+        "type": "array",
+        "items": {
+          "name": "bar",
+          "type": "record",
+          "fields": [
+            {"name": "timestamp", "type": "double"},
+            {"name": "open", "type": "string"},
+            {"name": "openUsd", "type": "string"},
+            {"name": "high", "type": "string"},
+            {"name": "highUsd", "type": "string"},
+            {"name": "low", "type": "string"},
+            {"name": "lowUsd", "type": "string"},
+            {"name": "close", "type": "string"},
+            {"name": "closeUsd", "type": "string"},
+            {"name": "volumeUsd", "type": "string"},
+            {"name": "minBlockNumber", "type": "double"},
+            {"name": "maxBlockNumber", "type": "double"}
+          ]
+        }
+      }
+    }
+  ] 
+}

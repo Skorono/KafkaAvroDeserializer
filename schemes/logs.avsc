@@ -1,0 +1,119 @@
+{
+  "name": "logTrace",
+  "type": "record",
+  "fields": [
+    {
+      "name": "logs",
+      "type": {
+        "type": "array",
+        "items": {
+          "name": "logRecord",
+          "type": "record",
+          "fields": [
+            {
+              "name": "amount0",
+              "type": "string"
+            },
+            {
+              "name": "amount1",
+              "type": "string"
+            },
+            {
+              "name": "blockNumber",
+              "type": "double"
+            },
+            {
+              "name": "blockTimestamp",
+              "type": "double"
+            },
+            {
+              "name": "logIndex",
+              "type": "int"
+            },
+            {
+              "name": "logType",
+              "type": "string"
+            },
+            {
+              "name": "maker",
+              "type": "string"
+            },
+            {
+              "name": "makerScreener",
+              "type": {
+                "name": "makerScreener",
+                "type": "record",
+                "fields": [
+                  {
+                    "name": "amountBuy",
+                    "type": ["string", "null"]
+                  },
+                  {
+                    "name": "amountSell",
+                    "type": ["string", "null"]
+                  },
+                  {
+                    "name": "balanceAmount",
+                    "type": ["string", "null"]
+                  },
+                  {
+                    "name": "balancePercentage",
+                    "type": ["double", "null"]
+                  },
+                  {
+                    "name": "buys",
+                    "type": "int"
+                  },
+                  {
+                    "name": "firstSwap",
+                    "type": "double"
+                  },
+                  {
+                    "name": "new",
+                    "type": "boolean"
+                  },
+                  {
+                    "name": "sells",
+                    "type": "int"
+                  },
+                  {
+                    "name": "volumeUsdBuy",
+                    "type": "double"
+                  },
+                  {
+                    "name": "volumeUsdSell",
+                    "type": "double"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "metadata",
+              "type": "null"
+            },
+            {
+              "name": "priceNative",
+              "type": "string"
+            },
+            {
+              "name": "priceUsd",
+              "type": "string"
+            },
+            {
+              "name": "txnHash",
+              "type": "string"
+            },
+            {
+              "name": "txnType",
+              "type": "string"
+            },
+            {
+              "name": "volumeUsd",
+              "type": "string"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
