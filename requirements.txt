@@ -1,1 +1,2 @@
 avro
+confluent_kafka

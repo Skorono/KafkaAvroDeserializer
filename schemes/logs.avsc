@@ -11,11 +11,7 @@
           "type": "record",
           "fields": [
             {
-              "name": "amount0",
-              "type": "string"
-            },
-            {
-              "name": "amount1",
+              "name": "logType",
               "type": "string"
             },
             {
@@ -27,16 +23,15 @@
               "type": "double"
             },
             {
-              "name": "logIndex",
-              "type": "int"
-            },
-            {
-              "name": "logType",
+              "name": "txnHash",
               "type": "string"
             },
             {
               "name": "maker",
-              "type": "string"
+              "type": [
+                "null",
+                "string"
+              ]
             },
             {
               "name": "makerScreener",
@@ -45,36 +40,12 @@
                 "type": "record",
                 "fields": [
                   {
-                    "name": "amountBuy",
-                    "type": ["string", "null"]
-                  },
-                  {
-                    "name": "amountSell",
-                    "type": ["string", "null"]
-                  },
-                  {
-                    "name": "balanceAmount",
-                    "type": ["string", "null"]
-                  },
-                  {
-                    "name": "balancePercentage",
-                    "type": ["double", "null"]
-                  },
-                  {
                     "name": "buys",
-                    "type": "int"
-                  },
-                  {
-                    "name": "firstSwap",
                     "type": "double"
                   },
                   {
-                    "name": "new",
-                    "type": "boolean"
-                  },
-                  {
                     "name": "sells",
-                    "type": "int"
+                    "type": "double"
                   },
                   {
                     "name": "volumeUsdBuy",
@@ -83,33 +54,88 @@
                   {
                     "name": "volumeUsdSell",
                     "type": "double"
+                  },
+                  {
+                    "name": "amountBuy",
+                    "type": "string"
+                  },
+                  {
+                    "name": "amountSell",
+                    "type": "string"
+                  },
+                  {
+                    "name": "balanceAmount",
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  {
+                    "name": "balancePercentage",
+                    "type": [
+                      "null",
+                      "string"
+                    ]
+                  },
+                  {
+                    "name": "firstSwap",
+                    "type": "double"
+                  },
+                  {
+                    "name": "new",
+                    "type": "boolean"
                   }
                 ]
               }
             },
             {
-              "name": "metadata",
-              "type": "null"
-            },
-            {
-              "name": "priceNative",
-              "type": "string"
-            },
-            {
-              "name": "priceUsd",
-              "type": "string"
-            },
-            {
-              "name": "txnHash",
-              "type": "string"
+              "name": "logIndex",
+              "type": [
+                "double"
+              ]
             },
             {
               "name": "txnType",
-              "type": "string"
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "priceUsd",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "priceNative",
+              "type": [
+                "null",
+                "string"
+              ]
             },
             {
               "name": "volumeUsd",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "amount0",
               "type": "string"
+            },
+            {
+              "name": "amount1",
+              "type": "string"
+            },
+            {
+              "name": "metadata",
+              "type": [
+                "null",
+                "string"
+              ]
             }
           ]
         }

@@ -11,18 +11,63 @@
           "name": "bar",
           "type": "record",
           "fields": [
-            {"name": "timestamp", "type": "double"},
-            {"name": "open", "type": "string"},
-            {"name": "openUsd", "type": "string"},
-            {"name": "high", "type": "string"},
-            {"name": "highUsd", "type": "string"},
-            {"name": "low", "type": "string"},
-            {"name": "lowUsd", "type": "string"},
-            {"name": "close", "type": "string"},
-            {"name": "closeUsd", "type": "string"},
-            {"name": "volumeUsd", "type": "string"},
-            {"name": "minBlockNumber", "type": "double"},
-            {"name": "maxBlockNumber", "type": "double"}
+            {
+              "name": "timestamp",
+              "type": "double"
+            },
+            {
+              "name": "open",
+              "type": "string"
+            },
+            {
+              "name": "openUsd",
+              "type": "string"
+            },
+            {
+              "name": "high",
+              "type": "string"
+            },
+            {
+              "name": "highUsd",
+              "type": "string"
+            },
+            {
+              "name": "low",
+              "type": "string"
+            },
+            {
+              "name": "lowUsd",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "close",
+              "type": "string"
+            },
+            {
+              "name": "closeUsd",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "volumeUsd",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "minBlockNumber",
+              "type": "double"
+            },
+            {
+              "name": "maxBlockNumber",
+              "type": "double"
+            }
           ]
         }
       }

@@ -15,7 +15,7 @@ class KafkaAvroDeserializer:
         self.reader = DatumReader(self.schema)
 
     def deserialize(self, bytes_message: bytes) -> json:
-        message_bytes = io.BytesIO(bytes_message)
-        decoder = BinaryDecoder(message_bytes)
+        byte_array = io.BytesIO(bytes_message)
+        decoder = BinaryDecoder(byte_array)
 
-        return json.load(self.reader.read(decoder))
+        return self.reader.read(decoder)
