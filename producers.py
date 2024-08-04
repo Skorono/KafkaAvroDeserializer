@@ -350,6 +350,40 @@ logs_data = {
     ]
 }
 
+charts = {
+    "schemaVersion": "1.0.0",
+    "bars": [
+        {
+            "timestamp": 1722776400000,
+            "open": "0.00004453",
+            "openUsd": "0.1301",
+            "high": "0.00004598",
+            "highUsd": "0.1340",
+            "low": "0.00004346",
+            "lowUsd": "0.1270",
+            "close": "0.00004580",
+            "closeUsd": "0.1334",
+            "volumeUsd": "192423.22",
+            "minBlockNumber": 20455352,
+            "maxBlockNumber": 20455424
+        },
+        {
+            "timestamp": 1722777300000,
+            "open": "0.00004580",
+            "openUsd": "0.1334",
+            "high": "0.00004572",
+            "highUsd": "0.1332",
+            "low": "0.00004561",
+            "lowUsd": "0.1329",
+            "close": "0.00004572",
+            "closeUsd": "0.1332",
+            "volumeUsd": "2273.91",
+            "minBlockNumber": 20455426,
+            "maxBlockNumber": 20455427
+        }
+    ]
+}
+
 bootstrap_servers = ['localhost:9092']
 topic_name = 'chart_topic'
 
@@ -376,6 +410,6 @@ class KafkaProducer:
         self.producer.flush()
 
 
-schema = avro.schema.parse(open(os.path.join("schemes", "logs.avsc"), "r").read())
+schema = avro.schema.parse(open(os.path.join("schemes", "chart.avsc"), "r").read())
 KafkaProducer = KafkaProducer()
-KafkaProducer.produce(logs_data, schema)
+KafkaProducer.produce(charts, schema)

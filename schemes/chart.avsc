@@ -17,7 +17,8 @@
             },
             {
               "name": "open",
-              "type": "string"
+              "type": "string",
+              "logicalType": "double"
             },
             {
               "name": "openUsd",
